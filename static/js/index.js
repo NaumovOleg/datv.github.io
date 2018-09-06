@@ -50,12 +50,19 @@ $ ( document ).ready ( function () {
             nextVideo.play ();
             nextVideo.parentElement.classList.remove ( 'is-hidden' );
         } );
-    }
+    };
+
+
+    console.log( settings );
+
+    runAll();
 
 } );
 
 
 function runAll () {
+
+    console.log( settings )
 
     settings.videos.forEach ( function ( video ) {
 
@@ -109,9 +116,14 @@ function runAll () {
         } );
     }, 500 );
 
+
+    console.log( settings );
+
     settings.videos[ 0 ].currentTime = 0.15;
     settings.videos[ 0 ].play ();
+
+
+
 }
 
-$ ( window ).on ( 'load', runAll );
 
