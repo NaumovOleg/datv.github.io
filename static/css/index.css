@@ -1,0 +1,98 @@
+
+@font-face {
+    font-family: Bukra-Bold;
+    src: url('../fonts/29LTBukra-Bold.otf');
+    src:
+            local('Bukra-Bold'),
+            local('Bukra-Bold'),
+            url('../fonts/29LTBukra-Bold.otf')
+            format('opentype');
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    /*box-sizing: border-box;*/
+    /*overflow-x: hidden;*/
+}
+.videos-container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.video-div{
+    /*position: fixed;*/
+    opacity: 1;
+    width: 100%;
+}
+
+.is-hidden {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:0
+}
+
+
+#wrapper {
+    width: 100%;
+    height: 190px;
+    position: absolute;
+    left: 5%;
+    bottom: 20%;
+    overflow-y: hidden;
+    z-index: 2;
+    display: none;
+    background: transparent;
+}
+
+#word_one p{
+
+    width: 0;
+    height: 0;
+    position: absolute;
+    color: white;
+    font-family: Bukra-Bold;
+    font-size: 9em;
+    animation-name: word_one;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+
+}
+
+@keyframes word_one {
+    0%, 8.3% { bottom: -100%; opacity: 0.5; }
+    8.3%,25% { bottom: 25%; opacity: 1; }
+    33.33%, 100% { bottom: 110%; opacity: 1; }
+}
+#word_two p {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 40%;
+    color: #fff;
+    font-family: Bukra-Bold;
+    font-size: 9em;
+    animation-name: word_two;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes word_two {
+    0%, 8.3% { bottom: -100%; opacity: 0.5; }
+    8.3%,25% { bottom: 25%; opacity: 1; }
+    33.33%, 100% { bottom: 110%; opacity: 1; }
+}

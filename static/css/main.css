@@ -1,0 +1,133 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    font-family: 'Bukra-Medium',sans-serif;
+}
+
+/* Animation */
+@-webkit-keyframes scroll {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    100% {
+        -webkit-transform: translate(-100%, 0);
+        transform: translate(-100%, 0)
+    }
+}
+
+@-moz-keyframes scroll {
+    0% {
+        -moz-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    100% {
+        -moz-transform: translate(-100%, 0);
+        transform: translate(-100%, 0)
+    }
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0)
+    }
+}
+
+#container {
+    position: absolute;
+    bottom: 1%;
+    width: 100%;
+}
+
+.marquee {
+    width: 95%;
+    margin-left: 5%;
+    padding: 8px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: white;
+    color: rgb(46, 58, 145);
+    font-family: 'Bukra-Medium',sans-serif;
+    font-size: 1.3em;
+}
+
+#triangle {
+    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 20px solid rgb(255, 219, 0);
+    border-left: 50px solid transparent;
+    z-index: 15;
+}
+
+#time {
+    margin-top: 20px;
+    width: 140px;
+    height: 43px;
+    position: absolute;
+    background-color: rgb(32, 42, 104);
+    background: linear-gradient(20deg, transparent 15px, rgb(32, 42, 104) 0)
+    bottom left;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+
+#txt {
+    margin-top: 10px;
+    padding-left: 30px;
+    color: rgb(255, 219, 0);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#animation {
+    display: inline-block;
+    padding-left: 100%;
+    -webkit-animation: scroll 35s infinite linear;
+    -moz-animation: scroll 35s infinite linear;
+    animation: scroll 35s infinite linear;
+    font-family: 'Bukra-Medium',sans-serif;
+}
+
+#player {
+    position: relative;
+    z-index: -1;
+}
+p {
+    font-family: 'Bukra-Medium',sans-serif;
+}
+#container{
+    display: none;
+}
+#newsline_space_left {
+    position: absolute;
+    height: 32px;
+    width: 30px;
+    background: #fff;
+    top: 17%;
+    left: 140px;
+    margin-top: 8px;
+    z-index: 10;
+}
+
+#newsline_space_right {
+    position: absolute;
+    height: 32px;
+    width: 53px;
+    background: #fff;
+    top: 17%;
+    right: 0;
+    margin-top: 8px;
+    z-index: 10;
+}
