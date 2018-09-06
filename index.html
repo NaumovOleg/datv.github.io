@@ -5,21 +5,91 @@
     <title>Title</title>
     <link rel="stylesheet" href="./static/css/index.css"/>
     <script src="./static/js/jquery-3.3.1.min.js"></script>
-
+    <script src="./static/js/index.js"></script>
 
 </head>
 
-<body >
-
+<body onload="startTime()">
 
 
 <div id="videos-container">
 
+    <div class="video-div">
+        <video class="0" width="100%" height="100%" muted="">
+            <source src="./static/videos/ident.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="video-div is-hidden">
+        <video class="1" width="100%" height="100%" muted="">
+            <source src="./static/videos/trans_1.mp4" type="video/mp4">
+        </video>
+        <div id="wrapper" style="display: none;">
+            <span id="word_one"><p>WHAT'S</p>
+            </span><span id="word_two"><p>UP</p></span></div>
+    </div>
+    <div class="video-div is-hidden">
+        <video class="2" width="100%" height="100%" muted="">
+            <source src="./static/videos/DA_TV_Branding_FULL EDIT_HH_120718_V2.mp4" type="video/mp4">
+        </video>
+
+    </div>
+    <div class="video-div is-hidden">
+        <video class="2" width="100%" height="100%" muted="">
+            <source src="./static/videos/DA_TV_Branding_FULL EDIT_HH_120718_V2_3_1.mp4" type="video/mp4">
+        </video>
+        <div class="animation__3">
+            <div class="box_one">
+                <p class="first_word">QUOTE</p>
+            </div>
+            <div class="box_two">
+                <p class="second_word">OF </p>
+                <p class="third_word">THE </p>
+                <p class="fourth_word">DAY</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="video-div is-hidden">
+        <video class="2" width="100%" height="100%" muted="">
+            <source src="./static/videos/DA_TV_Branding_FULL EDIT_HH_120718_V2_3.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="video-div is-hidden">
+        <video class="5" width="100%" height="100%" muted="">
+            <source src="./static/videos/DA_TV_Branding_FULL EDIT_HH_120718_V2_4_1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+
+</div>
+<div id="container" class="line-animation__with-timer">
+    <div id="blue_line"></div>
+    <div id="yellow_line"></div>
+    <div id="white_line"><p class="marquee"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elits.Aenean et euismod ligula. Suspendisse blandit ipsum non convallis finibus.</span></p></div>
+    <span id="skew_padding"></span>
+    <div id="tickler"><p id="txt"></p></div>
 </div>
 
-<!--<video id="player" width="100%" height="100%" muted >-->
-    <!--<source src="static/videos/ident.mp4"  type="video/mp4">-->
-<!--</video>-->
 </body>
-<script src="./static/js/index.js"></script>
+
+<script>
+    function startTime() {
+        var tm=new Date();
+        var h=tm.getHours();
+        var m=tm.getMinutes();
+        m=checkTime(m);
+        document.getElementById('txt').innerHTML=h+":"+m;
+        t=setTimeout('startTime()',60000);
+    }
+    function checkTime(i)
+    {
+        if (i<10) {
+            i="0" + i;
+        }
+        return i;
+    }
+
+</script>
+
 </html>
